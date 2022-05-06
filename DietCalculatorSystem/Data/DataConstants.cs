@@ -33,7 +33,7 @@
             public const int MaxAge = 90;
             public const double MinWeight = 20;
             public const double MaxWeight = 500;
-            public const int MinHeight = 40;
+            public const int MinHeight = 100;
             public const int MaxHeight = 300;
         }
     }

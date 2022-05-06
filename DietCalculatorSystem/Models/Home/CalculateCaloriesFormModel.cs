@@ -6,22 +6,22 @@ namespace DietCalculatorSystem.Models.Home
 {
     public class CalculateCaloriesFormModel
     {
-        [Required(ErrorMessage = "Age is required.")]
-        [Range(MinAge,MaxAge)]
+        [Required(ErrorMessage = "Yaş zorunlu.")]
+        [Range(MinAge,MaxAge, ErrorMessage = "Yaş en küçük 15 ve en çok 90 olmalı.")]
         public int? Age { get; set; }
 
-        [Required(ErrorMessage = "Gender is required.")]
+        [Required(ErrorMessage = "Cinsiyet zorunlu.")]
         public string Gender { get; set; }
 
-        [Required(ErrorMessage = "Height is required.")]
-        [Range(MinHeight,MaxHeight)]
+        [Required(ErrorMessage = "Boy zorunlu.")]
+        [Range(MinHeight, MaxHeight, ErrorMessage = "Boy en az 100 ve en fazla 300 cm olmalı.")]
         public double? Height { get; set; }
 
-        [Required(ErrorMessage = "Weight is required.")]
-        [Range(MinWeight,MaxWeight)]
+        [Required(ErrorMessage = "Kilo zorunlu.")]
+        [Range(MinWeight, MaxWeight, ErrorMessage = "Boy en az 100 ve en fazla 300 cm olmalı.")]
         public double? Weight { get; set; }
 
-        [Required(ErrorMessage = "Activity is required.")]
+        [Required(ErrorMessage = "Aktivite zorunlu.")]
         public double? Activity { get; set; }
     }
 }

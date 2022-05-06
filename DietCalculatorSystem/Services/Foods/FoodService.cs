@@ -151,19 +151,19 @@ namespace DietCalculatorSystem.Services.Foods
                 .FirstOrDefault(x => x.Id == id);
         }
 
-        public Food GetRandomFood()
-        {
-            var allFoods = data
-                .Foods
-                .Where(x => x.IsPublic == true)
-                .ToList();
+        //public Food GetRandomFood()
+        //{
+        //    var allFoods = data
+        //        .Foods
+        //        .Where(x => x.IsPublic == true)
+        //        .ToList();
 
-            var count = allFoods.Count;
+        //    var count = allFoods.Count;
 
-            Random rnd = new Random();
+        //    Random rnd = new Random();
 
-            return allFoods[rnd.Next(0, count)];
-        }
+        //    return allFoods[rnd.Next(0, count)];
+        //}
 
         public void RemoveFood(string foodId)
         {

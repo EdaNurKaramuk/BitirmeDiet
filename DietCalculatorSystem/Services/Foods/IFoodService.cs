@@ -27,7 +27,7 @@ namespace DietCalculatorSystem.Services.Foods
 
         void RemoveFood(string foodId);
 
-        Food GetRandomFood();
+        //Food GetRandomFood();
 
         List<Food> GetAllRequestedFoods();
 

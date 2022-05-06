@@ -35,17 +35,17 @@ namespace DietCalculatorSystem.Controllers
         [Authorize]
         public IActionResult IndexLoggedIn()
         {
-            var FoodOfTheDay = this.cache.Get<Food>(FOTDCacheKey);
+            //var FoodOfTheDay = this.cache.Get<Food>(FOTDCacheKey);
 
-            if (FoodOfTheDay == null)
-            {
-                var food = foods.GetRandomFood();
+            //if (FoodOfTheDay == null)
+            //{
+            //    var food = foods.GetRandomFood();
 
-                var cacheEntryOptions = new MemoryCacheEntryOptions()
-                    .SetAbsoluteExpiration(TimeSpan.FromHours(24));
+            //    var cacheEntryOptions = new MemoryCacheEntryOptions()
+            //        .SetAbsoluteExpiration(TimeSpan.FromHours(24));
 
-                this.cache.Set(FOTDCacheKey, food, cacheEntryOptions);
-            }
+            //    this.cache.Set(FOTDCacheKey, food, cacheEntryOptions);
+            //}
 
             return View(this.cache.Get(FOTDCacheKey));
         }       

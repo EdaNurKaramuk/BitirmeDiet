@@ -13,35 +13,35 @@
 	<header>
 		<nav class="navbar bg-secondary font-settings navbar-expand-sm navbar-light box-shadow mb-3">
 			<div class="container">
-				<a class="navbar-brand btn-settings" asp-area="" asp-controller="Home" asp-action="Index"><b>Diet Calculator</b></a>
+				<a class="navbar-brand btn-settings" asp-area="" asp-controller="Home" asp-action="Index"><b>Ana Sayfa</b></a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
 						aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-					<a class="navbar-brand btn-settings" asp-area="" asp-controller="Food" asp-action="All"><b>Foods</b></a>
+					<a class="navbar-brand btn-settings" asp-area="" asp-controller="Food" asp-action="All"><b>Yemekler</b></a>
 					<ul class="navbar-nav flex-grow-1">
 						@if (User.Identity.IsAuthenticated)
 						{
 							<li class="nav-item navbar-brand">
-								<a class="navbar-brand btn-settings" asp-area="" asp-controller="Calculator" asp-action="Calculator"><b>Calculator</b></a>
+								<a class="navbar-brand btn-settings" asp-area="" asp-controller="Calculator" asp-action="Calculator"><b>Hesaplayıcı</b></a>
 							</li>
 							<li >
 								<button class="navbar-brand btn-settings" style="margin-top:5px;"
 									data-toggle="toggle" data-target="#expandingButton">
-									<b>Diets</b>
+									<b>Diyetler</b>
 								</button>
 
 								<div id="expandingButton">
 									<ul class="navbar-nav flex-grow-1" style="margin-bottom:5px">
 										<li class="nav-item">
-											<a class="nav-link" style="color: black" asp-area="" asp-controller="Diet" asp-action="Deficit"><b>Deficit</b></a>
+											<a class="nav-link" style="color: black" asp-area="" asp-controller="Diet" asp-action="Deficit"><b>Kilo Verme</b></a>
 										</li>
 										<li class="nav-item">
-											<a class="nav-link" style="color: black" asp-area="" asp-controller="Diet" asp-action="Balanced"><b>Balanced</b></a>
+											<a class="nav-link" style="color: black" asp-area="" asp-controller="Diet" asp-action="Balanced"><b>Dengeli</b></a>
 										</li>
 										<li class="nav-item">
-											<a class="nav-link" style="color: black" asp-area="" asp-controller="Diet" asp-action="Surplus"><b>Surplus</b></a>
+											<a class="nav-link" style="color: black" asp-area="" asp-controller="Diet" asp-action="Surplus"><b>Kilo Alma</b></a>
 										</li>
 									</ul>
 								</div>

@@ -4,20 +4,20 @@
 	ViewData["Title"] = "Surplus";
 }
 
-<h1 style="text-align:center; margin-bottom:2%">Surplus Diet</h1>
+<h1 style="text-align:center; margin-bottom:2%">Kilo Alma </h1>
 
 <body>
 	<div class="row">
 		<div class="col-lg-7 no-gutters text-box font-settings">
 			<div>
-				<h3 style="text-align:center; padding-top: 1%">Total</h3>
+                <h3 style="text-align:center; padding-top: 1%">Günlük Gereken Kalori ve Makro Besin Değerleri</h3>
 				<table class="table text-box">
 					<thead class="thead-light">
 						<tr style="text-align:center">
-							<th style="color:black">Calories</th>
-							<th style="color:black">Proteins</th>
-							<th style="color:black">Fats</th>
-							<th style="color:black">Carbs</th>
+							<th style="color:black">Kalori</th>
+							<th style="color:black">Protein</th>
+							<th style="color:black">Yağ</th>
+							<th style="color:black">Karbonhidrat</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -28,16 +28,16 @@
 							<td>@Model.TotalCarbohydrates</td>
 						</tr>
 				</table>
-				<h3 style="text-align:center">Breakfast</h3>
+				<h3 style="text-align:center">Kahvaltı</h3>
 				<table class="table text-box">
 					<thead class="thead-light">
 						<tr style="text-align:center">
-							<th style="color:black" scope="col">Name</th>
-							<th style="color:black" scope="col">Calories</th>
-							<th style="color:black" scope="col">Proteins</th>
-							<th style="color:black" scope="col">Fats</th>
-							<th style="color:black" scope="col">Carbs</th>
-							<th style="color:black" scope="col">Quantity</th>
+							<th style="color:black" scope="col">İsim</th>
+							<th style="color:black" scope="col">Kalori</th>
+							<th style="color:black" scope="col">Protein</th>
+							<th style="color:black" scope="col">Yağ</th>
+							<th style="color:black" scope="col">Karbonhidrat</th>
+							<th style="color:black" scope="col">Adet</th>
 							<th style="color:black" scope="col"></th>
 						</tr>
 					</thead>
@@ -57,16 +57,16 @@
 							</tr>
 						}
 				</table>
-				<h3 style="text-align:center">Lunch</h3>
+				<h3 style="text-align:center">Öğle Yemeği</h3>
 				<table class="table text-box">
 					<thead class="thead-light">
 						<tr style="text-align:center">
-							<th style="color:black" scope="col">Name</th>
-							<th style="color:black" scope="col">Calories</th>
-							<th style="color:black" scope="col">Proteins</th>
-							<th style="color:black" scope="col">Fats</th>
-							<th style="color:black" scope="col">Carbs</th>
-							<th style="color:black" scope="col">Quantity</th>
+							<th style="color:black" scope="col">İsim</th>
+							<th style="color:black" scope="col">Kalori</th>
+							<th style="color:black" scope="col">Protein</th>
+							<th style="color:black" scope="col">Yağ</th>
+							<th style="color:black" scope="col">Karbonhidrat</th>
+							<th style="color:black" scope="col">Adet</th>
 							<th style="color:black" scope="col"></th>
 						</tr>
 					</thead>
@@ -86,16 +86,16 @@
 							</tr>
 						}
 				</table>
-				<h3 style="text-align:center">Dinner</h3>
+				<h3 style="text-align:center">Akşam Yemeği</h3>
 				<table class="table text-box">
 					<thead class="thead-light">
 						<tr style="text-align:center">
-							<th style="color:black" scope="col">Name</th>
-							<th style="color:black" scope="col">Calories</th>
-							<th style="color:black" scope="col">Proteins</th>
-							<th style="color:black" scope="col">Fats</th>
-							<th style="color:black" scope="col">Carbs</th>
-							<th style="color:black" scope="col">Quantity</th>
+							<th style="color:black" scope="col">İsim</th>
+							<th style="color:black" scope="col">Kalori</th>
+							<th style="color:black" scope="col">Protein</th>
+							<th style="color:black" scope="col">Yağ</th>
+							<th style="color:black" scope="col">Karbonhidrat</th>
+							<th style="color:black" scope="col">Adet</th>
 							<th style="color:black" scope="col"></th>
 						</tr>
 					</thead>
@@ -123,20 +123,20 @@
 					<form method="get">
 						<div class="row" style="margin-bottom:10px">
 							<div style="text-align:center; margin:auto" class="form-group col-md-5">
-								<label class="font-settings" asp-for="SearchTerm"></label>
-								<input asp-for="SearchTerm" class="form-control" placeholder="Enter food name...">
+								<label class="font-settings" asp-for="SearchTerm">Ara</label>
+								<input asp-for="SearchTerm" class="form-control" placeholder="Yemek ismi girin...">
 							</div>
 							<div style="text-align:center; margin:auto" class="form-group col-md-4">
-									<label class="font-settings" asp-for="Sorting"></label>
+									<label class="font-settings" asp-for="Sorting">Sırala</label>
 									<select asp-for="Sorting" class="form-control">
-										<option value="0" selected>Calories</option>
-										<option value="1">Proteins</option>
-										<option value="2">Fats</option>
-										<option value="3">Carbohydrates</option>
+										<option value="0" selected>Kalori</option>
+										<option value="1">Protein</option>
+										<option value="2">Yağ</option>
+										<option value="3">Karbonhidrat</option>
 									</select>
 							</div>
 							<div class="form-group col-md-3" style="margin:auto; margin-top:30px">
-								<input type="submit" class="btn btn-settings font-settings" value="Search">
+								<input type="submit" class="btn btn-settings font-settings" value="Ara">
 							</div>
 						</div>
 					</form>
