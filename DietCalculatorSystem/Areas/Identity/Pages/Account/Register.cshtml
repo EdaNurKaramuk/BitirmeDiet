@@ -1,7 +1,7 @@
 ﻿@page
 @model RegisterModel
 @{
-	ViewData["Title"] = "Register";
+	ViewData["Title"] = "Kayıt Olun";
 }
 
 <div class="text-center">
@@ -9,30 +9,30 @@
 	<div class="text-box" style="margin:auto; width:60%; text-align:left;padding: 10px 10px 10px 10px">
 		<div style="padding: 10px 10px 10px 10px">
 			<form asp-route-returnUrl="@Model.ReturnUrl" method="post">
-				<h4 style="font-size: 26px">Create a new account.</h4>
+				<h4 style="font-size: 26px">Yeni bir hesap oluşturun.</h4>
 				<hr />
 				<div asp-validation-summary="All" class="text-danger"></div>
 				<div class="form-group font-settings">
-					<label asp-for="Input.FullName"></label>
+					<label asp-for="Input.FullName">Kullanıcı Adı</label>
 					<input asp-for="Input.FullName" class="form-control" />
 					<span asp-validation-for="Input.FullName" class="text-danger"></span>
 				</div>
 				<div class="form-group font-settings">
-					<label asp-for="Input.Email"></label>
+					<label asp-for="Input.Email">E-Mail</label>
 					<input asp-for="Input.Email" class="form-control" />
 					<span asp-validation-for="Input.Email" class="text-danger"></span>
 				</div>
 				<div class="form-group font-settings">
-					<label asp-for="Input.Password"></label>
+					<label asp-for="Input.Password">Şifre</label>
 					<input asp-for="Input.Password" class="form-control" />
 					<span asp-validation-for="Input.Password" class="text-danger"></span>
 				</div>
 				<div class="form-group font-settings">
-					<label asp-for="Input.ConfirmPassword"></label>
+					<label asp-for="Input.ConfirmPassword">Şifreyi Doğrulayın</label>
 					<input asp-for="Input.ConfirmPassword" class="form-control" />
 					<span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
 				</div>
-				<button type="submit" class="btn-settings font-settings">Register</button>
+				<button type="submit" class="btn-settings font-settings">Kayıt Ol</button>
 			</form>
 		</div>
 	</div>

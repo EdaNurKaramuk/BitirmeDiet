@@ -44,16 +44,16 @@ namespace DietCalculatorSystem.Areas.Identity.Pages.Account
 
         public class InputModel
         {
-            [Required]
-            [StringLength(MaxFullNameLength, ErrorMessage = "{0} must be at least {2} and at max {1} characters long.", MinimumLength = MinFullNameLength)]
-            [Display(Name = "Full Name")]
+            [Required(ErrorMessage = "Kullanıcı Adı alanı boş bırakılamaz.")]
+            [StringLength(MaxFullNameLength, ErrorMessage = "{0} en az {2} ve en fazla {1} karakter uzunluğunda olmalı.", MinimumLength = MinFullNameLength)]
+            [Display(Name = "Kullanıcı Adı")]
             public string FullName { get; set; }
 
-            [Required]
+            [Required(ErrorMessage = "Şifre alanı boş bırakılamaz.")]
             [DataType(DataType.Password)]
             public string Password { get; set; }
 
-            [Display(Name = "Remember me?")]
+            [Display(Name = "Beni Hatırla")]
             public bool RememberMe { get; set; }
         }
 

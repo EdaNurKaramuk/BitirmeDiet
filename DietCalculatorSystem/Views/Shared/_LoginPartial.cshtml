@@ -13,17 +13,17 @@
 		</li>
 		<li class="nav-item">
 			<form class="font-settings" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
-				<button type="submit" class="navbar-brand btn-settings"><b>Logout</b></button>
+				<button type="submit" class="navbar-brand btn-settings"><b>Çıkış Yap</b></button>
 			</form>
 		</li>
 	}
 	else
 	{
 		<li class="nav-item">
-			<a class="navbar-brand btn-settings" asp-area="Identity" asp-page="/Account/Register"><b>Register</b></a>
+			<a class="navbar-brand btn-settings" asp-area="Identity" asp-page="/Account/Register"><b>Kayıt Ol</b></a>
 		</li>
 		<li class="nav-item">
-			<a class="navbar-brand btn-settings" asp-area="Identity" asp-page="/Account/Login"><b>Login</b></a>
+			<a class="navbar-brand btn-settings" asp-area="Identity" asp-page="/Account/Login"><b>Giriş Yap</b></a>
 		</li>
 	}
 </ul>

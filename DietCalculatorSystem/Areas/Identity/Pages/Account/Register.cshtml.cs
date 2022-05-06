@@ -54,25 +54,25 @@ namespace DietCalculatorSystem.Areas.Identity.Pages.Account
 
         public class InputModel
         {
-            [Required]
-            [StringLength(MaxFullNameLength, ErrorMessage = "{0} must be at least {2} and at max {1} characters long.", MinimumLength = MinFullNameLength)]
-            [Display(Name = "Full Name")]
+            [Required(ErrorMessage = "Kullanıcı Adı alanı boş bırakılamaz.")]
+            [StringLength(MaxFullNameLength, ErrorMessage = "{0} en az {2} ve en fazla {1} karakter uzunluğunda olmalı.", MinimumLength = MinFullNameLength)]
+            [Display(Name = "Kullanıcı Adı")]
             public string FullName { get; set; }
 
-            [Required]
-            [EmailAddress]
-            [Display(Name = "Email")]
+            [Required(ErrorMessage = "E-Mail alanı boş bırakılamaz.")]
+            [EmailAddress(ErrorMessage = "Geçerli bir e-posta adresi girin.")]
+            [Display(Name = "E-Mail")]
             public string Email { get; set; }
 
-            [Required]
-            [StringLength(MaxPasswordLength, ErrorMessage = "{0} must be at least {2} and at max {1} characters long.", MinimumLength = MinPasswordLength)]
+            [Required(ErrorMessage = "Şifre alanı boş bırakılamaz.")]
+            [StringLength(MaxPasswordLength, ErrorMessage = "{0} en az {2} ve en fazla {1} karakter uzunluğunda olmalı.", MinimumLength = MinPasswordLength)]
             [DataType(DataType.Password)]
-            [Display(Name = "Password")]
+            [Display(Name = "Şifre")]
             public string Password { get; set; }
 
             [DataType(DataType.Password)]
-            [Display(Name = "Confirm password")]
-            [Compare("Password", ErrorMessage = "Password and confirmation password do not match.")]
+            [Display(Name = "Şifreyi Doğrulayın")]
+            [Compare("Password", ErrorMessage = "Şifre ve doğrulanan şifre birbiriyle uyuşmuyor.")]
             public string ConfirmPassword { get; set; }
         }
 

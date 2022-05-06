@@ -2,7 +2,7 @@
 @model LoginModel
 
 @{
-	ViewData["Title"] = "Log in";
+	ViewData["Title"] = "Giriş Yapın";
 }
 
 <div class="text-center">
@@ -11,16 +11,16 @@
 		<div style="padding: 10px 10px 10px 10px">
 			<section>
 				<form id="account" method="post">
-					<h4 style="font-size: 26px">Log in using your username and password.</h4>
+                    <h4 style="font-size: 26px">Kullanıcı adınızı ve şifrenizi kullanarak giriş yapın.</h4>
 					<hr />
 					<div asp-validation-summary="All" class="text-danger"></div>
 					<div class="form-group font-settings">
-						<label asp-for="Input.FullName"></label>
+						<label asp-for="Input.FullName">Kullanıcı Adı</label>
 						<input asp-for="Input.FullName" class="form-control" />
 						<span asp-validation-for="Input.FullName" class="text-danger"></span>
 					</div>
 					<div class="form-group font-settings">
-						<label asp-for="Input.Password"></label>
+						<label asp-for="Input.Password">Şifre</label>
 						<input asp-for="Input.Password" class="form-control" />
 						<span asp-validation-for="Input.Password" class="text-danger"></span>
 					</div>
@@ -33,11 +33,11 @@
 						</div>
 					</div>
 					<div class="form-group">
-						<button type="submit" class="btn-settings font-settings">Log in</button>
+						<button type="submit" class="btn-settings font-settings">Giriş Yap</button>
 					</div>
 					<div class="form-group" >
 						<p>
-							<a asp-page="./Register" style="color:green" asp-route-returnUrl="@Model.ReturnUrl">Register as a new user</a>
+                            <a asp-page="./Register" style="color:green" asp-route-returnUrl="@Model.ReturnUrl">Yeni bir kullanıcı olarak kaydolun</a>
 						</p>
 					</div>
 				</form>
