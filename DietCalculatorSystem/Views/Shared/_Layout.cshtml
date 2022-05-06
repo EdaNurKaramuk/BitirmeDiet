@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>@ViewData["Title"] - Diet Calculator</title>
+	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="~/css/site.css" />
+	<link rel="stylesheet" href="~/css/navbar.css" />
+	<link rel="stylesheet" href="~/css/foods.css" />
+</head>
+<body>
+	<header>
+		<nav class="navbar bg-secondary font-settings navbar-expand-sm navbar-light box-shadow mb-3">
+			<div class="container">
+				<a class="navbar-brand btn-settings" asp-area="" asp-controller="Home" asp-action="Index"><b>Diet Calculator</b></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+						aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+					<a class="navbar-brand btn-settings" asp-area="" asp-controller="Food" asp-action="All"><b>Foods</b></a>
+					<ul class="navbar-nav flex-grow-1">
+						@if (User.Identity.IsAuthenticated)
+						{
+							<li class="nav-item navbar-brand">
+								<a class="navbar-brand btn-settings" asp-area="" asp-controller="Calculator" asp-action="Calculator"><b>Calculator</b></a>
+							</li>
+							<li >
+								<button class="navbar-brand btn-settings" style="margin-top:5px;"
+									data-toggle="toggle" data-target="#expandingButton">
+									<b>Diets</b>
+								</button>
+
+								<div id="expandingButton">
+									<ul class="navbar-nav flex-grow-1" style="margin-bottom:5px">
+										<li class="nav-item">
+											<a class="nav-link" style="color: black" asp-area="" asp-controller="Diet" asp-action="Deficit"><b>Deficit</b></a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" style="color: black" asp-area="" asp-controller="Diet" asp-action="Balanced"><b>Balanced</b></a>
+										</li>
+										<li class="nav-item">
+											<a class="nav-link" style="color: black" asp-area="" asp-controller="Diet" asp-action="Surplus"><b>Surplus</b></a>
+										</li>
+									</ul>
+								</div>
+							</li>
+						}
+					</ul>
+					<partial name="_LoginPartial" />
+				</div>
+			</div>
+		</nav>
+	</header>
+	<div class="container">
+		<main role="main" class="pb-3">
+			@RenderBody()
+		</main>
+	</div>
+
+	<script src="~/lib/jquery/dist/jquery.min.js"></script>
+	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="~/js/site.js" asp-append-version="true"></script>
+	@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

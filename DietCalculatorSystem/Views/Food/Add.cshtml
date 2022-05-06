@@ -1,0 +1,58 @@
+﻿@model AddFoodFormModel
+
+@{
+	ViewData["Title"] = "Add Food";
+}
+
+<div class="text-center">
+	<h1 class="display-4">@ViewData["Title"]</h1>
+	<div class="text-box" style="margin:auto; width:60%; text-align:left;padding: 10px 10px 10px 10px">
+		<div style="padding: 10px 10px 10px 10px">
+			<form method="post">
+				<h4 style="font-size: 26px">Suggest a food you would like to have in our collection.</h4>
+				<hr />
+				<div asp-validation-summary="All" class="text-danger"></div>
+				<div class="form-group font-settings">
+					<label asp-for="Name"></label>
+					<input asp-for="Name" class="form-control" placeholder="Enter food name...">
+					<span asp-validation-for="Name" class="small text-danger"></span>
+				</div>
+				<div class="form-group font-settings">
+					<label asp-for="Description"></label>
+					<input asp-for="Description" class="form-control" placeholder="Enter description...">
+					<span asp-validation-for="Description" class="small text-danger"></span>
+				</div>
+				<div class="form-group font-settings">
+					<label asp-for="PictureUrl"></label>
+					<input asp-for="PictureUrl" class="form-control" placeholder="Enter picture url...">
+					<span asp-validation-for="PictureUrl" class="small text-danger"></span>
+				</div>
+				<div class="form-group font-settings">
+					<label asp-for="Calories"></label>
+					<input asp-for="Calories" class="form-control" placeholder="Enter food calories...">
+					<span asp-validation-for="Calories" class="small text-danger"></span>
+				</div>
+				<div class="form-group font-settings">
+					<label asp-for="Proteins"></label>
+					<input asp-for="Proteins" class="form-control" placeholder="Enter food proteins...">
+					<span asp-validation-for="Proteins" class="small text-danger"></span>
+				</div>
+				<div class="form-group font-settings">
+					<label asp-for="Fats"></label>
+					<input asp-for="Fats" class="form-control" placeholder="Enter food fats...">
+					<span asp-validation-for="Fats" class="small text-danger"></span>
+				</div>
+				<div class="form-group font-settings">
+					<label asp-for="Carbohydrates"></label>
+					<input asp-for="Carbohydrates" class="form-control" placeholder="Enter food carbohydrates...">
+					<span asp-validation-for="Carbohydrates" class="small text-danger"></span>
+				</div>
+				<button type="submit" class="btn btn-settings font-settings">Submit</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+@section Scripts{
+<partial name="_ValidationScriptsPartial" />
+}
