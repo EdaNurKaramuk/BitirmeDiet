@@ -6,7 +6,7 @@
 	{
 		@if (User.IsInRole("Administrator"))
 		{
-			<a class="navbar-brand btn-settings" asp-area="Admin" asp-controller="Food" asp-action="Requests"><b>Requests</b></a>
+			<a class="navbar-brand btn-settings" asp-area="Admin" asp-controller="Food" asp-action="Requests"><b>İstekler</b></a>
 		}
 		<li class="nav-item">
 			<a class="navbar-brand btn-settings" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage"><b>Merhaba @User.Identity.Name!</b></a>
