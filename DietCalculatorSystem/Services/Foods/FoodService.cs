@@ -116,33 +116,33 @@ namespace DietCalculatorSystem.Services.Foods
                 .ToList();
         }
 
-        public FoodDetailsServiceModel GetDetails(string foodId)
-        {
-            var allFoods = data
-                .Foods
-                .Where(x => x.IsPublic == true)
-                .ToList();
+        //public FoodDetailsServiceModel GetDetails(string foodId)
+        //{
+        //    var allFoods = data
+        //        .Foods
+        //        .Where(x => x.IsPublic == true)
+        //        .ToList();
 
-            var mainFood = allFoods
-                .FirstOrDefault(x => x.Id == foodId);
+        //    var mainFood = allFoods
+        //        .FirstOrDefault(x => x.Id == foodId);
 
-            allFoods.Remove(mainFood);
+        //    allFoods.Remove(mainFood);
 
-            Random rnd = new();
+        //    Random rnd = new();
 
-            var suggestedFoodOne = allFoods[rnd.Next(0, allFoods.Count)];
+        //    var suggestedFoodOne = allFoods[rnd.Next(0, allFoods.Count)];
 
-            allFoods.Remove(suggestedFoodOne);
+        //    allFoods.Remove(suggestedFoodOne);
 
-            var suggestedFoodTwo = allFoods[rnd.Next(0, allFoods.Count)];
+        //    var suggestedFoodTwo = allFoods[rnd.Next(0, allFoods.Count)];
 
-            return new FoodDetailsServiceModel
-            {
-                MainFood = mainFood,
-                FirstSuggestedFood = suggestedFoodOne,
-                SecondSuggestedFood = suggestedFoodTwo
-            };
-        }
+        //    return new FoodDetailsServiceModel
+        //    {
+        //        MainFood = mainFood,
+        //        FirstSuggestedFood = suggestedFoodOne,
+        //        SecondSuggestedFood = suggestedFoodTwo
+        //    };
+        //}
 
         public Food GetFood(string id)
         {

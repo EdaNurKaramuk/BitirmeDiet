@@ -14,7 +14,7 @@
         {
             public const int MinFoodNameLength = 2;
             public const int MaxFoodNameLength = 40;
-            public const int MinDescriptionLength = 10;
+            public const int MinDescriptionLength = 5;
             public const int MaxDescriptionLength = 200;
             public const int MinCalories = 0;
             public const int MaxCalories = 900;

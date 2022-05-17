@@ -44,7 +44,7 @@ namespace DietCalculatorSystem.Controllers
         {
             if (foods.FoodExists(foodModel.Name))
             {
-                this.ModelState.AddModelError(nameof(foodModel.Name), "Food already exists!");
+                this.ModelState.AddModelError(nameof(foodModel.Name), "Bu yemek zaten var!");
             }
 
             if (!ModelState.IsValid)
@@ -63,10 +63,10 @@ namespace DietCalculatorSystem.Controllers
             return RedirectToAction(nameof(All));
         }
 
-        public IActionResult Details(string foodId) 
-        {
-            return this.View(foods.GetDetails(foodId));
-        }
+        //public IActionResult Details(string foodId) 
+        //{
+        //    return this.View(foods.GetDetails(foodId));
+        //}
 
         [Authorize(Roles = AdministratorRoleName)]
         public IActionResult Delete(string foodId)

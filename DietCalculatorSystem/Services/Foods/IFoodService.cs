@@ -23,7 +23,7 @@ namespace DietCalculatorSystem.Services.Foods
             string description,
             string pictureUrl);
 
-        FoodDetailsServiceModel GetDetails(string foodId);
+        //FoodDetailsServiceModel GetDetails(string foodId);
 
         void RemoveFood(string foodId);
 
