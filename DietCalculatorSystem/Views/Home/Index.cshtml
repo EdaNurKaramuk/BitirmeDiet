@@ -2,12 +2,54 @@
 	ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-	<h1 class="display-4" style="padding-top: 0.5em; ">Welcome to Diet calculator</h1>
-	<div class="text-box" style="width: 75%; margin:auto;">
-		<h3 style="padding-top: 1em;">Here you can calculate your calories, proteins, fats and carbohydrates needed to lose, maintain or gain weight!</h3>
-		<h3 style="padding-top: 2em;">You can choose from various foods and create your own custom diets, which will help you achieve the weight you want.</h3>
-		<h3 style="padding-top: 2em;">Have a look at all the foods and more details about them right <a style="color:green" href="/Food/All">here</a>.</h3>
-		<h3 style="padding-top: 2em; padding-bottom: 1em">Register and start your food journey from <a style="color:green" href="/Identity/Account/Register">here</a>.</h3>
-	</div>
+<link rel="stylesheet" href="~/css/homepage.css" />
+
+<div class="container">
+    <section class="section-intro">
+        <h1>Mutluluğun temeli</h1>
+        <h3>SAĞLIKTIR...</h3>
+    </section>
+
+    <section class="about-section">
+        <article>
+            <div class="container">
+                <h3>
+                    Sağlıklı bir yaşam istiyorsan doğru yerdesin!
+                </h3>
+                <div class="row">
+                    <div class="feature-box col-lg-4">
+                        <img src="~/images/about1.png" class="aboutimg" alt="about1">
+                        <h3>Kalori Takibi</h3>
+                        <hr>
+                        <p class="about-text">Gün içinde yediğin yiyecekleri kaydet, kaç kalori aldığını gör! Kalori takibi sayesinde hedefine daha kolay ulaşacaksın.</p>
+                    </div>
+
+                    <div class="feature-box col-lg-4">
+                        <img src="~/images/about2.png" class="aboutimg" alt="about2">
+                        <h3>Kişisel Analiz</h3>
+                        <hr>
+                        <p class="about-text">Senin sağlığın her şeyden önemli! Kişisel raporlarını dilediğin zaman inceleyebilirsin.</p>
+                    </div>
+
+                    <div class="feature-box col-lg-4">
+                        <img src="~/images/about3.png" class="aboutimg" alt="about3">
+                        <h3>Destek Kadromuz</h3>
+                        <hr>
+                        <p class="about-text">Bir sıkıntı mı yaşadın? Burada sana her an yardımcı olacağız. Bizim desteğimize güven!</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <section class="section-searchfood">
+        <h3>Koleksiyonumuzdaki yemekleri kalori ve makro besin değerleri ile birlikte görebilir, ayrıca yeni önerilerle koleksiyonumuzu zenginleştirebilirsiniz.</h3>
+        <h3>Bütün yemeklere ve detaylara bakmak için <a style="color: #fabd00" href="/Food/All">buraya</a> tıklayın.</h3>
+    </section>
+
+    <section class="section-footer">
+        <h3>Hazırsanız başlayalım! Hemen kayıt olun.</h3>
+        <p><a href="/Identity/Account/Register" class="btn btn-outline">Kayıt Ol</a></p>
+    </section>
+
 </div>
