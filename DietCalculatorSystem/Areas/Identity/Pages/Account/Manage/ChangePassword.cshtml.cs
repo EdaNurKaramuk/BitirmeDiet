@@ -31,12 +31,12 @@ namespace DietCalculatorSystem.Areas.Identity.Pages.Account.Manage
 
         public class InputModel
         {
-            [Required]
+            [Required(ErrorMessage = "Eski şifre alanı boş bırakılamaz.")]
             [DataType(DataType.Password)]
             [Display(Name = "Eski şifre")]
             public string OldPassword { get; set; }
 
-            [Required]
+            [Required(ErrorMessage = "Yeni şifre alanı boş bırakılamaz.")]
             [StringLength(100, ErrorMessage = "{0} en az {2} ve en fazla {1} karakter uzunluğunda olmalıdır.", MinimumLength = 6)]
             [DataType(DataType.Password)]
             [Display(Name = "Yeni şifre")]

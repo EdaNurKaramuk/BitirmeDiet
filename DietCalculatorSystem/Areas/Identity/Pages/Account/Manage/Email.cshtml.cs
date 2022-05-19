@@ -41,8 +41,8 @@ namespace DietCalculatorSystem.Areas.Identity.Pages.Account.Manage
 
         public class InputModel
         {
-            [Required]
-            [EmailAddress]
+            [Required(ErrorMessage ="Yeni e-mail alanı boş bırakılamaz.")]
+            [EmailAddress(ErrorMessage ="Geçersiz e-mail.")]
             [Display(Name = "Yeni E-mail")]
             public string NewEmail { get; set; }
         }

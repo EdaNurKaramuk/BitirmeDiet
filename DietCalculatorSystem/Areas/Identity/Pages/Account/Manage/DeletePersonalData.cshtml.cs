@@ -33,7 +33,7 @@ namespace DietCalculatorSystem.Areas.Identity.Pages.Account.Manage
 
         public class InputModel
         {
-            [Required]
+            [Required(ErrorMessage = "Şifre boş bırakılamaz.")]
             [DataType(DataType.Password)]
             public string Password { get; set; }
         }
@@ -65,7 +65,7 @@ namespace DietCalculatorSystem.Areas.Identity.Pages.Account.Manage
             {
                 if (!await userManager.CheckPasswordAsync(user, Input.Password))
                 {
-                    ModelState.AddModelError(string.Empty, "Incorrect password.");
+                    ModelState.AddModelError(string.Empty, "Şifre yanlış.");
                     return Page();
                 }
             }
