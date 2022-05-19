@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Food>
+
+<h1 style="text-align:center; margin-bottom:2%">Yemek Önerileri</h1>
+
+<table class="table table-striped text-box">
+    <thead class="thead-dark">
+        <tr>
+            <th class="font-settings" style="width:15%; text-align:center">Resim</th>
+            <th class="font-settings" style="width:10%; text-align:center">İsim</th>
+            <th class="font-settings" style="width:25%; text-align:center">Açıklama</th>
+            <th class="font-settings" style="width:10%; text-align:center">Kalori</th>
+            <th class="font-settings" style="width:10%; text-align:center">Protein</th>
+            <th class="font-settings" style="width:10%; text-align:center">Yağ</th>
+            <th class="font-settings" style="width:10%; text-align:center">Karb.</th>
+            <th class="font-settings" style="text-align:center">Aksiyon</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var food in Model)
+        {
+        <tr>
+            <td scope="col" style="width:15%; height:15%; vertical-align:middle"><img src="@food.PictureUrl" class="card-img-top"></td>
+            <td class="font-settings" style="width:10%; vertical-align:middle; text-align:center">@food.Name</td>
+            <td class="font-settings" style="width:25%; vertical-align:middle">@food.Description</td>
+            <td class="font-settings" style="width:10%; vertical-align:middle; text-align:center">@food.Calories</td>
+            <td class="font-settings" style="width:10%; vertical-align:middle; text-align:center">@food.Proteins</td>
+            <td class="font-settings" style="width:10%; vertical-align:middle; text-align:center">@food.Fats</td>
+            <td class="font-settings" style="width:10%; vertical-align:middle; text-align:center">@food.Carbohydrates</td>
+            <td class="font-settings" style="vertical-align:middle">
+                <a style="margin-bottom:50%" asp-area="Admin" asp-controller="Food" asp-action="Accept" asp-route-foodId="@food.Id" class="btn btn-settings font-settings float-right ml-3">Onayla</a>
+                <a asp-area="Admin" asp-controller="Food" asp-action="Deny" asp-route-foodId="@food.Id" class="btn btn-danger float-right font-settings ml-3" style="color:black">Reddet</a>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

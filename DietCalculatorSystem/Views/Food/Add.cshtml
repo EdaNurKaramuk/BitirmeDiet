@@ -1,0 +1,58 @@
+﻿@model AddFoodFormModel
+
+@{
+	ViewData["Title"] = "Yemek Ekle";
+}
+
+<div class="text-center">
+	<h1 class="display-4">@ViewData["Title"]</h1>
+	<div class="text-box" style="margin:auto; width:60%; text-align:left;padding: 10px 10px 10px 10px">
+		<div style="padding: 10px 10px 10px 10px">
+			<form method="post">
+                <h4 style="font-size: 26px">Koleksiyonumuzda olmasını istediğiniz bir yiyecek önerin.</h4>
+				<hr />
+				<div asp-validation-summary="All" class="text-danger"></div>
+				<div class="form-group font-settings">
+					<label asp-for="Name">Yemek İsmi</label>
+					<input asp-for="Name" class="form-control" placeholder="Yemek ismi girin...">
+					<span asp-validation-for="Name" class="small text-danger"></span>
+				</div>
+				<div class="form-group font-settings">
+					<label asp-for="Description">Açıklama</label>
+					<input asp-for="Description" class="form-control" placeholder="Açıklama girin...">
+					<span asp-validation-for="Description" class="small text-danger"></span>
+				</div>
+				<div class="form-group font-settings">
+					<label asp-for="PictureUrl">Resim Linki (URL)</label>
+					<input asp-for="PictureUrl" class="form-control" placeholder="Resim URL'sini girin...">
+					<span asp-validation-for="PictureUrl" class="small text-danger"></span>
+				</div>
+				<div class="form-group font-settings">
+					<label asp-for="Calories">Kalori</label>
+					<input asp-for="Calories" class="form-control" placeholder="Kalori değerini girin...">
+					<span asp-validation-for="Calories" class="small text-danger"></span>
+				</div>
+				<div class="form-group font-settings">
+					<label asp-for="Proteins">Protein</label>
+					<input asp-for="Proteins" class="form-control" placeholder="Protein değerini girin...">
+					<span asp-validation-for="Proteins" class="small text-danger"></span>
+				</div>
+				<div class="form-group font-settings">
+					<label asp-for="Fats">Yağ</label>
+					<input asp-for="Fats" class="form-control" placeholder="Yağ değerini girin...">
+					<span asp-validation-for="Fats" class="small text-danger"></span>
+				</div>
+				<div class="form-group font-settings">
+					<label asp-for="Carbohydrates">Karbonhidrat</label>
+					<input asp-for="Carbohydrates" class="form-control" placeholder="Karbonhidrat değerini girin...">
+					<span asp-validation-for="Carbohydrates" class="small text-danger"></span>
+				</div>
+				<button type="submit" class="btn btn-settings font-settings">Gönder</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+@section Scripts{
+<partial name="_ValidationScriptsPartial" />
+}

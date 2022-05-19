@@ -1,0 +1,58 @@
+﻿.allFoods {
+    border: solid;
+    border-color: lightgreen;
+    background-color: rgba(241,243,242,0.9);
+    vertical-align: bottom;
+    width: 100%;
+    height: 450px;
+}
+
+@media screen and (max-width:1200px) {
+    .allFoods {
+        width: 100%;
+        height: 400px;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .allFoods {
+        width: 50%;
+        height: 400px;
+    }
+}
+
+.allFoodsImage {
+    margin-top:15px;
+    width: 100%;
+    height: 40%;
+}
+
+@media screen and (max-width:1200px) {
+    .allFoodsImage {
+        height: 30%;
+    }
+}
+
+.centerButton {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-top:12px;
+}
+
+.filterText {
+    font-size:20px;
+    text-align:center;
+}
+
+.detailedFoodImages {
+    margin-top: 15px;
+    width: 100%;
+    height: 250px;
+}
+
+.mainDetailedFoodImage {
+    width: 100%;
+    height: 500px;
+}
+

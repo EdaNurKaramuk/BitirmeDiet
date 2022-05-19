@@ -1,0 +1,45 @@
+﻿@model Food
+
+@{
+	ViewData["Title"] = "Home";
+}
+<h1 class="display-4" style="text-align:center">Welcome</h1>
+<div class="row" style="padding-top: 1em">
+	@*<div class="col-lg-4 no-gutters">
+		<h2 style="text-align:center">Food Of The Day</h2>
+		<div class="text-box card" style="width: 22rem; margin:auto">
+			<img class="card-img-top text-box" src="@Model.PictureUrl" alt="Card image cap">
+			<div class="card-body text-box">
+				<h4 class="card-title">@Model.Name</h4>
+				<h5 class="card-text">@Model.Description</h5>
+			</div>
+			<ul class="list-group list-group-flush text-box">
+				<li class="list-group-item text-box">Calories: @Model.Calories</li>
+				<li class="list-group-item text-box">Proteins: @Model.Proteins</li>
+				<li class="list-group-item text-box">Fats: @Model.Fats</li>
+				<li class="list-group-item text-box">Carbohydrates: @Model.Carbohydrates</li>
+			</ul>
+		</div>
+	</div>*@
+	<div class="col-lg no-gutters">
+		<h2 style="text-align:center">Frequently Asked Questions</h2>
+	<div class="text-box" style="width: 100%; margin:auto; padding: 10px 10px 10px 10px">
+		<h5><b>Q:</b> What are calories?</h5>
+		<h5><b>A:</b> Calories are the amount of energy released when your body breaks down food.</h5>
+		<h5 style="padding-top: 0.3em"><b>Q:</b> What are proteins?</h5>
+		<h5><b>A:</b> Protein is a macronutrient that is essential to building muscle mass. One gram of protein equals four calories.</h5>
+		<h5 style="padding-top: 0.3em"><b>Q:</b> What are fats?</h5>
+		<h5><b>A:</b> Fat is a source of essential fatty acids, which the body cannot make itself. One gram of fat equals nine calories.</h5>
+		<h5 style="padding-top: 0.3em"><b>Q:</b> What are carbs?</h5>
+		<h5><b>A:</b> Carbohydrates are the main source of energy for the body. One gram of carbohydrates equals four calories.</h5>
+		<h5 style="padding-top: 0.3em"><b>Q:</b> What is deficit diet?</h5>
+		<h5><b>A:</b> Deficit diet is to consume less calories than the amount that your body burns.</h5>
+		<h5 style="padding-top: 0.3em"><b>Q:</b> What is balanced diet?</h5>
+		<h5><b>A:</b> Balanced diet is to consume the same amount of calories that your body burns.</h5>
+		<h5 style="padding-top: 0.3em"><b>Q:</b> What is surplus diet?</h5>
+		<h5><b>A:</b> Surplus diet is to consume more calories than the amount that your body burns</h5>
+		<h5 style="padding-top: 0.3em"><b>Q:</b> How do I get started?</h5>
+		<h5 style="padding-bottom: 1em"><b>A:</b> You can start by calculating your calories from <a href="/Calculator/Calculator" style="color:green">here</a>.</h5>
+	</div>
+	</div>
+</div>
