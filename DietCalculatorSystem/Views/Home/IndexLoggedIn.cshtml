@@ -1,45 +1,51 @@
 ﻿@model Food
 
 @{
-	ViewData["Title"] = "Home";
+    ViewData["Title"] = "Home";
 }
-<h1 class="display-4" style="text-align:center">Welcome</h1>
-<div class="row" style="padding-top: 1em">
-	@*<div class="col-lg-4 no-gutters">
-		<h2 style="text-align:center">Food Of The Day</h2>
-		<div class="text-box card" style="width: 22rem; margin:auto">
-			<img class="card-img-top text-box" src="@Model.PictureUrl" alt="Card image cap">
-			<div class="card-body text-box">
-				<h4 class="card-title">@Model.Name</h4>
-				<h5 class="card-text">@Model.Description</h5>
-			</div>
-			<ul class="list-group list-group-flush text-box">
-				<li class="list-group-item text-box">Calories: @Model.Calories</li>
-				<li class="list-group-item text-box">Proteins: @Model.Proteins</li>
-				<li class="list-group-item text-box">Fats: @Model.Fats</li>
-				<li class="list-group-item text-box">Carbohydrates: @Model.Carbohydrates</li>
-			</ul>
-		</div>
-	</div>*@
-	<div class="col-lg no-gutters">
-		<h2 style="text-align:center">Frequently Asked Questions</h2>
-	<div class="text-box" style="width: 100%; margin:auto; padding: 10px 10px 10px 10px">
-		<h5><b>Q:</b> What are calories?</h5>
-		<h5><b>A:</b> Calories are the amount of energy released when your body breaks down food.</h5>
-		<h5 style="padding-top: 0.3em"><b>Q:</b> What are proteins?</h5>
-		<h5><b>A:</b> Protein is a macronutrient that is essential to building muscle mass. One gram of protein equals four calories.</h5>
-		<h5 style="padding-top: 0.3em"><b>Q:</b> What are fats?</h5>
-		<h5><b>A:</b> Fat is a source of essential fatty acids, which the body cannot make itself. One gram of fat equals nine calories.</h5>
-		<h5 style="padding-top: 0.3em"><b>Q:</b> What are carbs?</h5>
-		<h5><b>A:</b> Carbohydrates are the main source of energy for the body. One gram of carbohydrates equals four calories.</h5>
-		<h5 style="padding-top: 0.3em"><b>Q:</b> What is deficit diet?</h5>
-		<h5><b>A:</b> Deficit diet is to consume less calories than the amount that your body burns.</h5>
-		<h5 style="padding-top: 0.3em"><b>Q:</b> What is balanced diet?</h5>
-		<h5><b>A:</b> Balanced diet is to consume the same amount of calories that your body burns.</h5>
-		<h5 style="padding-top: 0.3em"><b>Q:</b> What is surplus diet?</h5>
-		<h5><b>A:</b> Surplus diet is to consume more calories than the amount that your body burns</h5>
-		<h5 style="padding-top: 0.3em"><b>Q:</b> How do I get started?</h5>
-		<h5 style="padding-bottom: 1em"><b>A:</b> You can start by calculating your calories from <a href="/Calculator/Calculator" style="color:green">here</a>.</h5>
-	</div>
-	</div>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="~/css/calc.css" />
+
+<div class="capsule">
+    <div class="c-container">
+        <h1 class="c-h1">Vücut Kitle İndeksi Hesaplama</h1>
+        <span class="c-span">Boy ve kilo bilgilerinizi girerek vücut endeksinizi hesaplayabilirsiniz.</span>
+
+        <form>
+            <label class="c-label">Boy(cm)</label>
+            <input class="c-input" type="number" placeholder="Boy uzunluğunuzu girin" />
+            <label class="c-label">Kilo(kg)</label>
+            <input class="c-input" type="number" placeholder="Kilonuzu girin" />
+            <span class="c-span c-description">Vücut kitle indeksinize göre 9 farklı indeks aralığından biri ile eşleştirilecek ve eşleşme sonucunuzla ilgili özete ulaşabileceksiniz.</span>
+            <input class="c-input" type="submit" value="Hesapla" />
+        </form>
+    </div>
+</div>
+<div class="capsule">
+    <div class="c-blog">
+        <div class="c-blog-item">
+            <img class="c-blog-item-img" src="~/images/deficit.jpg" />
+            <h2 class="c-blog-item-h2">Deficit</h2>
+            <span class="c-blog-item-span">Tükettiğimizden daha fazla kalori yakmaya kalori açığı ile kilo verme denir. 1 kilogram toplamda 7.000 kaloriden oluşmaktadır. Yani haftada 1 kg vermek için her gün 1000 kalori açığı oluşturulması gerekir. Günlük 500-1000 arasındaki bir kalori açığı genellikle güvenli ve ulaşılabilir olarak kabul edilir.</span>
+            <a class="c-blog-item-a" href="#">Devamını oku</a>
+        </div>
+        <div class="c-blog-item">
+            <img class="c-blog-item-img"  src="~/images/surplus.jpg" />
+            <h2 class="c-blog-item-h2">Surplus</h2>
+            <span class="c-blog-item-span">
+                Kalori fazlalığı, tükettiğimiz kalori sayısının yaktığımız kalori sayısından fazla olması durumudur. Tükettiğimiz kalorinin yaktığımız kaloriden fazla olması durumunda vücut kütlemiz artar. Kilomuzu veya kas kütlemizi artırmayı hedefliyorsak kalori fazlasına ihtiyacımız olacak ve vücudun yaktığı kaloriden daha fazla kalori tüketmeniz gerekecek.
+                Kas kazanımlarının gerçekleşmesi için genellikle %10-20 ek kalori olmak üzere yeterli bir kalori fazlası gerekir. Uygun bir direnç antrenman yöntemi ile birleştirildiğinde çoğu insan için büyük kas ve güç kazanımlarına katkıda bulunur
+            </span>
+            <a class="c-blog-item-a" href="#">Devamını oku</a>
+        </div>
+        <div class="c-blog-item">
+            <img class="c-blog-item-img"  src="~/images/balanced.jpg" />
+            <h2 class="c-blog-item-h2">Balanced</h2>
+            <span class="c-blog-item-span">Dengeli beslenme, bir kişinin tüm beslenme ihtiyaçlarını karşılar. İnsanların sağlıklı kalabilmeleri için belirli miktarda kaloriye ve besine ihtiyacı vardır. Önerilen günlük kalori alımını aşmadan hem mevut kilonun korunmasını hem de kişinin ihtiyaç duyduğu tüm besin maddelerini almasını sağlar. Dengeli beslenerek insanlar ihtiyaç duydukları besinleri ve kalorileri alabilirler ve abur cubur veya besin değeri olmayan yiyecekleri yemekten kaçınabilirler. Aynı zamanda insanların sağlıklı kalmasına yardımcı olarak hastalık riskini azaltır. Dengeli beslenmek için beş gruptan oluşan gıdalar tüketilmelidir. Bu 5 grup sebze, meyve, tahıl, protein ve süt ürünlerinden oluşmaktadır.</span>
+            <a class="c-blog-item-a" href="#">Devamını oku</a>
+        </div>
+    </div>
 </div>
