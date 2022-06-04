@@ -43,7 +43,7 @@ namespace DietCalculatorSystem.Controllers
                 calculateModel.Weight,
                 calculateModel.Activity);
 
-            return Redirect("/Food/All");
+            return Redirect("/Diet/Deficit");
         }
 
         private static bool ValidateGender(string gender)
