@@ -11,6 +11,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System.Globalization;
 
 namespace DietCalculatorSystem
 {
@@ -54,6 +55,8 @@ namespace DietCalculatorSystem
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             app.PrepareDatabase();
+
+            CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("en-US");
 
             if (env.IsDevelopment())
             {
