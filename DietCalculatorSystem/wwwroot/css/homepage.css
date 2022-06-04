@@ -1,8 +1,4 @@
-﻿/*@import url('https://fonts.googleapis.com/css?family=Big+Shoulders+Text:100,300,400,500,600,700,800,900&display=swap');*/
-
-/* font-family: 'Big Shoulders Text', cursive; */
-
-body {
+﻿body {
     margin-bottom: 0px !important;
 }
 
@@ -129,6 +125,7 @@ body {
 
 .about-text {
     color: #fcfcfb;
+    font-size: 20px !important;
 }
 
 .navbar {
@@ -168,7 +165,7 @@ hr {
     text-align: center;
     width: 80%;
     margin: auto;
-    font-family: 'Big Shoulders Text', cursive;
+    font-family: 'Ubuntu', sans-serif;
     font-size: 1.5em;
 }
 
@@ -189,7 +186,7 @@ hr {
 }
 
 .btn.btn-primary {
-    font-family: 'Big Shoulders Text', cursive;
+    font-family: 'Ubuntu', sans-serif;
     color: #ffffff;
     background-color: #95999e;
     text-transform: uppercase;
