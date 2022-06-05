@@ -25,15 +25,15 @@
                  else
                 {
                     <input asp-for="Email" class="form-control" style="width:50%" disabled />
-                    <button id="email-verification" style="color:green" type="submit" asp-page-handler="SendVerificationEmail" class="btn btn-link">Doğrulama e-mail'i gönder</button>
+                    @*<button id="email-verification" style="color:green" type="submit" asp-page-handler="SendVerificationEmail" class="btn btn-link">Doğrulama e-mail'i gönder</button>*@
                 }
             </div>
-            <div class="form-group font-settings">
+            @*<div class="form-group font-settings">
                 <label asp-for="Input.NewEmail"></label>
                 <input asp-for="Input.NewEmail" class="form-control" style="width:50%" />
                 <span asp-validation-for="Input.NewEmail" class="text-danger"></span>
-            </div>
-            <button id="change-email-button" type="submit" asp-page-handler="ChangeEmail" class="btn btn-settings font-settings">E-mail değiştir</button>
+            </div>*@
+            @*<button id="change-email-button" type="submit" asp-page-handler="ChangeEmail" class="btn btn-settings font-settings">E-mail değiştir</button>*@
         </form>
     </div>
 
