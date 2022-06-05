@@ -1,4 +1,4 @@
-﻿@model Food
+﻿@model CalculateBMIModel
 
 @{
     ViewData["Title"] = "Home";
@@ -14,13 +14,26 @@
         <h1 class="c-h1">Vücut Kitle İndeksi Hesaplama</h1>
         <span class="c-span">Boy ve kilo bilgilerinizi girerek vücut endeksinizi hesaplayabilirsiniz.</span>
 
-        <form>
-            <label class="c-label">Boy(cm)</label>
-            <input class="c-input" type="number" placeholder="Boy uzunluğunuzu girin" />
-            <label class="c-label">Kilo(kg)</label>
-            <input class="c-input" type="number" placeholder="Kilonuzu girin" />
+        <form method="post">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <label asp-for="Height" class="c-label">Boy(cm)</label>
+            <input asp-for="Height" class="c-input" type="number" placeholder="Boy uzunluğunuzu giriniz." />
+            <span asp-validation-for="Height" class="small text-danger"></span>
+
+            <label asp-for="Weight" class="c-label">Kilo(kg)</label>
+            <input asp-for="Weight" class="c-input" type="number" placeholder="Kilonuzu giriniz." />
+            <span asp-validation-for="Weight" class="small text-danger"></span>
+
             <span class="c-span c-description">Vücut kitle indeksinize göre 9 farklı indeks aralığından biri ile eşleştirilecek ve eşleşme sonucunuzla ilgili özete ulaşabileceksiniz.</span>
-            <input class="c-input" type="submit" value="Hesapla" />
+            <button class="c-input" type="submit">Hesapla</button>
+            @if (Model != null)
+            {
+                <label asp-for="BMIValue" class="c-label">Vücut Kitle Endeksiniz (BMI)</label>
+                <input asp-for="BMIValue" class="c-input" value="@Model.BMIValue" readonly />
+                <label class="c-label">Sonuç: @Model.BMIValueResult</label>
+            }
+
+
         </form>
     </div>
 </div>

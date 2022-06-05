@@ -1,5 +1,6 @@
 ﻿using DietCalculatorSystem.Data.Models;
 using DietCalculatorSystem.Models;
+using DietCalculatorSystem.Models.Home;
 using DietCalculatorSystem.Services.Foods;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -35,20 +36,26 @@ namespace DietCalculatorSystem.Controllers
         [Authorize]
         public IActionResult IndexLoggedIn()
         {
-            //var FoodOfTheDay = this.cache.Get<Food>(FOTDCacheKey);
-
-            //if (FoodOfTheDay == null)
-            //{
-            //    var food = foods.GetRandomFood();
-
-            //    var cacheEntryOptions = new MemoryCacheEntryOptions()
-            //        .SetAbsoluteExpiration(TimeSpan.FromHours(24));
-
-            //    this.cache.Set(FOTDCacheKey, food, cacheEntryOptions);
-            //}
+            //return View(new CalculateBMIModel());
 
             return View(this.cache.Get(FOTDCacheKey));
-        }       
+        }
+
+        [Authorize]
+        [HttpPost]
+        public IActionResult IndexLoggedIn(CalculateBMIModel bmiModel)
+        {
+            double? heightMeter = bmiModel.Height / 100.0;
+            bmiModel.BMIValue = bmiModel.Weight / (Math.Pow((double)heightMeter, 2));
+
+            //Değer aralığına göre ideal kilonun altı-üstü yazılarını burada yazalım.
+            if(bmiModel.BMIValue < 20)
+            {
+                bmiModel.BMIValueResult = "Normal";
+            }
+
+            return View(bmiModel);
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
