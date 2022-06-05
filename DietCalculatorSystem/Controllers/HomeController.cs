@@ -48,10 +48,26 @@ namespace DietCalculatorSystem.Controllers
             double? heightMeter = bmiModel.Height / 100.0;
             bmiModel.BMIValue = bmiModel.Weight / (Math.Pow((double)heightMeter, 2));
 
-            //Değer aralığına göre ideal kilonun altı-üstü yazılarını burada yazalım.
-            if(bmiModel.BMIValue < 20)
+            //Değer aralığına göre ideal kilonun altı-üstü bilgilerini burada tanımladım.
+            if(bmiModel.BMIValue <= 18.5)
             {
-                bmiModel.BMIValueResult = "Normal";
+                bmiModel.BMIValueResult = "İdeal kilonun altında.";
+            }
+            else if (bmiModel.BMIValue > 18.5 && bmiModel.BMIValue <= 24.9)
+            {
+                bmiModel.BMIValueResult = "İdeal kiloda.";
+            }
+            else if (bmiModel.BMIValue > 24.9 && bmiModel.BMIValue <= 29.9)
+            {
+                bmiModel.BMIValueResult = "İdeal kilonun üstünde.";
+            }
+            else if (bmiModel.BMIValue > 29.9 && bmiModel.BMIValue <= 39.9)
+            {
+                bmiModel.BMIValueResult = "İdeal kilonun çok üstünde (Obez).";
+            }
+            else
+            {
+                bmiModel.BMIValueResult = "İdeal kilonun çok üstünde (Morbid Obez).";
             }
 
             return View(bmiModel);
