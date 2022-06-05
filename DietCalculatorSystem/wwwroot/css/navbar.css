@@ -4,11 +4,12 @@
 }
 
 .bg-secondary {
-    background-image: url("../images/background.jpg");
-    background-repeat: no-repeat;
+    /*background-image: url("../images/background.jpg");
+    background-repeat: no-repeat;*/
     background-size: cover;
-    background-attachment: fixed;
+    /*background-attachment: fixed;*/
     color: green;
+    background: #fffffff2 !important;
 }
 
 .font-settings {
@@ -23,8 +24,19 @@
     color: black;
 }
 
+.btn-settings1 {
+    background-color: rgba(144,238,144,0);
+    padding: 5px 5px 5px 5px;
+    border-radius: 6px;
+    color: black;
+}
+
 .btn-settings:hover {
     background-color: rgb(144,238,144);
+}
+
+.btn-settings1:hover {
+    background-color: rgba(191, 225, 178, 0.61);
 }
 
 .btn-extra {
