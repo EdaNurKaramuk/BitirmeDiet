@@ -51,23 +51,23 @@ namespace DietCalculatorSystem.Controllers
             //Değer aralığına göre ideal kilonun altı-üstü bilgilerini burada tanımladım.
             if(bmiModel.BMIValue <= 18.5)
             {
-                bmiModel.BMIValueResult = "İdeal kilonun altında.";
+                bmiModel.BMIValueResult = "İdeal kilonuzun altındasınız. Az miktarda vücut yağına sahipsiniz. Eğer atletseniz bu istenebilir bir durumdur; fakat değilseniz zayıf VKİ seviyesi vücut ağırlığınızın düşük olduğunu gösterir ve bağışıklık sisteminizin zayıflamasına sebep olabilir. Eğer VKİ’niz ve vücut ağırlığınız düşükse kas hacminizi artırmak için sağlıklı bir beslenme ve egzersiz yoluyla kilo almaya çalışmalısınız. Size 'Surplus' diyeti öneririz.";
             }
             else if (bmiModel.BMIValue > 18.5 && bmiModel.BMIValue <= 24.9)
             {
-                bmiModel.BMIValueResult = "İdeal kiloda.";
+                bmiModel.BMIValueResult = "İdeal vücut yağına sahipsiniz. Bu, uzun ve ciddi hastalık oranının en az olduğu bir hayat demektir. Aynı zamanda bu oran birçok insanın estetik olarak en çekici bulduğu orandır. Kilonuzu korumanızı öneririz. Bunu 'Balanced' diyet ile yapabilirsiniz.";
             }
             else if (bmiModel.BMIValue > 24.9 && bmiModel.BMIValue <= 29.9)
             {
-                bmiModel.BMIValueResult = "İdeal kilonun üstünde.";
+                bmiModel.BMIValueResult = "İdeal kilonuzun üstündesiniz. Diyet ya da egzersizle kilo vermenin yollarını aramalısınız. Şu anki kilonuzla çeşitli hastalıklar için risk taşımaktasınız. Beslenme stilinizi değiştirerek ve egzersize daha fazla ağırlık vererek kilo vermelisiniz. Size 'Deficit' diyeti öneririz.";
             }
             else if (bmiModel.BMIValue > 29.9 && bmiModel.BMIValue <= 39.9)
             {
-                bmiModel.BMIValueResult = "İdeal kilonun çok üstünde (Obez).";
+                bmiModel.BMIValueResult = "İdeal kilonuzun çok üstündesiniz. Obez kategorisindesiniz. Sağlıksız bir kilonuz var, bunun getirdiği ve getireceği sağlık sorunlarıyla karşı karşıyasınız. Beslenme stilinizi değiştirerek ve egzersize daha fazla ağırlık vererek kilo vermelisiniz. Size 'Deficit' diyeti öneririz.";
             }
             else
             {
-                bmiModel.BMIValueResult = "İdeal kilonun çok üstünde (Morbid Obez).";
+                bmiModel.BMIValueResult = "İdeal kilonuzun çok üstündesiniz. Morbid obez kategorisindesiniz. Büyük risklerle karşı karşıyasınız ve bunlar ölümcül olabilir. Bu aşamada hastalık artık kronik ve tehlikeli bir hal almıştır. Beslenme stilinizi acilen değiştirmelisiniz. Size 'Deficit' diyeti öneririz.";
             }
 
             return View(bmiModel);
