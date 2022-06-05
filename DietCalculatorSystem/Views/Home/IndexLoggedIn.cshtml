@@ -41,7 +41,7 @@
             <img class="c-blog-item-img" src="~/images/deficit.jpg" />
             <h2 class="c-blog-item-h2">Deficit</h2>
             <span class="c-blog-item-span">Tükettiğimizden daha fazla kalori yakmaya kalori açığı ile kilo verme denir. 1 kilogram toplamda 7.000 kaloriden oluşmaktadır. Yani haftada 1 kg vermek için her gün 1000 kalori açığı oluşturulması gerekir. Günlük 500-1000 arasındaki bir kalori açığı genellikle güvenli ve ulaşılabilir olarak kabul edilir.</span>
-            <a class="c-blog-item-a" href="#">Devamını oku</a>
+            <a class="c-blog-item-a" href="#" id="btnShowDeficitModal">Devamını oku</a>
         </div>
         <div class="c-blog-item">
             <img class="c-blog-item-img" src="~/images/surplus.jpg" />
@@ -50,16 +50,132 @@
                 Kalori fazlalığı, tükettiğimiz kalori sayısının yaktığımız kalori sayısından fazla olması durumudur. Tükettiğimiz kalorinin yaktığımız kaloriden fazla olması durumunda vücut kütlemiz artar. Kilomuzu veya kas kütlemizi artırmayı hedefliyorsak kalori fazlasına ihtiyacımız olacak ve vücudun yaktığı kaloriden daha fazla kalori tüketmeniz gerekecek.
                 Kas kazanımlarının gerçekleşmesi için genellikle %10-20 ek kalori olmak üzere yeterli bir kalori fazlası gerekir. Uygun bir direnç antrenman yöntemi ile birleştirildiğinde çoğu insan için büyük kas ve güç kazanımlarına katkıda bulunur
             </span>
-            <a class="c-blog-item-a" href="#">Devamını oku</a>
+            <a class="c-blog-item-a" href="#" id="btnShowSurplusModal">Devamını oku</a>
         </div>
         <div class="c-blog-item">
             <img class="c-blog-item-img" src="~/images/balanced.jpg" />
             <h2 class="c-blog-item-h2">Balanced</h2>
             <span class="c-blog-item-span">Dengeli beslenme, bir kişinin tüm beslenme ihtiyaçlarını karşılar. İnsanların sağlıklı kalabilmeleri için belirli miktarda kaloriye ve besine ihtiyacı vardır. Önerilen günlük kalori alımını aşmadan hem mevut kilonun korunmasını hem de kişinin ihtiyaç duyduğu tüm besin maddelerini almasını sağlar. Dengeli beslenerek insanlar ihtiyaç duydukları besinleri ve kalorileri alabilirler ve abur cubur veya besin değeri olmayan yiyecekleri yemekten kaçınabilirler. Aynı zamanda insanların sağlıklı kalmasına yardımcı olarak hastalık riskini azaltır. Dengeli beslenmek için beş gruptan oluşan gıdalar tüketilmelidir. Bu 5 grup sebze, meyve, tahıl, protein ve süt ürünlerinden oluşmaktadır.</span>
-            <a class="c-blog-item-a" href="#">Devamını oku</a>
+            <a class="c-blog-item-a" href="#" id="btnShowBalancedModal">Devamını oku</a>
         </div>
     </div>
 </div>
+
+@*Diyet metinlerinin popup şeklinde devamı*@
+
+<div class="container">
+    <div class="modal fade" tabindex="-1" id="deficitModal"
+         data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="c-blog-item-h2">Deficit Diyet</h2>
+                    <button type="button" class="close" data-dismiss="modal">
+                        ×
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img class="diet-modal-img" src="~/images/deficit.jpg" />
+                    <div>Tükettiğimizden daha fazla kalori yakmaya kalori açığı ile kilo verme denir. 1 kilogram toplamda 7.000 kaloriden oluşmaktadır. Yani haftada 1 kg vermek için her gün 1000 kalori açığı oluşturulması gerekir. Günlük 500-1000 arasındaki bir kalori açığı genellikle güvenli ve ulaşılabilir olarak kabul edilir.</div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="btnHideDeficitModal" class="btn btn-primary button button4">
+                        Kapat
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="modal fade" tabindex="-1" id="surplusModal"
+         data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="c-blog-item-h2">Surplus Diyet</h2>
+                    <button type="button" class="close" data-dismiss="modal">
+                        ×
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img class="diet-modal-img" src="~/images/surplus.jpg" />
+                    <div>
+                        Kalori fazlalığı, tükettiğimiz kalori sayısının yaktığımız kalori sayısından fazla olması durumudur. Tükettiğimiz kalorinin yaktığımız kaloriden fazla olması durumunda vücut kütlemiz artar. Kilomuzu veya kas kütlemizi artırmayı hedefliyorsak kalori fazlasına ihtiyacımız olacak ve vücudun yaktığı kaloriden daha fazla kalori tüketmeniz gerekecek.
+                        Kas kazanımlarının gerçekleşmesi için genellikle %10-20 ek kalori olmak üzere yeterli bir kalori fazlası gerekir. Uygun bir direnç antrenman yöntemi ile birleştirildiğinde çoğu insan için büyük kas ve güç kazanımlarına katkıda bulunur
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="btnHideSurplusModal" class="btn btn-primary button button4">
+                        Kapat
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="modal fade" tabindex="-1" id="balancedModal"
+         data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="c-blog-item-h2">Balanced Diyet</h2>
+                    <button type="button" class="close" data-dismiss="modal">
+                        ×
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img class="diet-modal-img" src="~/images/balanced.jpg" />
+                    <div>Dengeli beslenme, bir kişinin tüm beslenme ihtiyaçlarını karşılar. İnsanların sağlıklı kalabilmeleri için belirli miktarda kaloriye ve besine ihtiyacı vardır. Önerilen günlük kalori alımını aşmadan hem mevut kilonun korunmasını hem de kişinin ihtiyaç duyduğu tüm besin maddelerini almasını sağlar. Dengeli beslenerek insanlar ihtiyaç duydukları besinleri ve kalorileri alabilirler ve abur cubur veya besin değeri olmayan yiyecekleri yemekten kaçınabilirler. Aynı zamanda insanların sağlıklı kalmasına yardımcı olarak hastalık riskini azaltır. Dengeli beslenmek için beş gruptan oluşan gıdalar tüketilmelidir. Bu 5 grup sebze, meyve, tahıl, protein ve süt ürünlerinden oluşmaktadır.</div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="btnHideBalancedModal" class="btn btn-primary button button4">
+                        Kapat
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+
+</script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+
+    $("#btnShowDeficitModal").click(function () {
+        $("#deficitModal").modal('show');
+    });
+
+    $("#btnHideDeficitModal").click(function () {
+        $("#deficitModal").modal('hide');
+    });
+
+
+    $("#btnShowSurplusModal").click(function () {
+        $("#surplusModal").modal('show');
+    });
+
+    $("#btnHideSurplusModal").click(function () {
+        $("#surplusModal").modal('hide');
+    });
+
+
+    $("#btnShowBalancedModal").click(function () {
+        $("#balancedModal").modal('show');
+    });
+
+    $("#btnHideBalancedModal").click(function () {
+        $("#balancedModal").modal('hide');
+    });
+
+
+</script>
 
 @section Scripts{
     <partial name="_ValidationScriptsPartial" />
