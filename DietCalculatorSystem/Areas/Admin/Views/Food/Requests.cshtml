@@ -1,5 +1,9 @@
 ﻿@model IEnumerable<Food>
 
+@{
+    ViewData["Title"] = "İstekler";
+}
+
 <h1 style="text-align:center; margin-bottom:2%">Yemek Önerileri</h1>
 
 <table class="table table-striped text-box">
@@ -18,19 +22,19 @@
     <tbody>
         @foreach (var food in Model)
         {
-        <tr>
-            <td scope="col" style="width:15%; height:15%; vertical-align:middle"><img src="@food.PictureUrl" class="card-img-top"></td>
-            <td class="font-settings" style="width:10%; vertical-align:middle; text-align:center">@food.Name</td>
-            <td class="font-settings" style="width:25%; vertical-align:middle">@food.Description</td>
-            <td class="font-settings" style="width:10%; vertical-align:middle; text-align:center">@food.Calories</td>
-            <td class="font-settings" style="width:10%; vertical-align:middle; text-align:center">@food.Proteins</td>
-            <td class="font-settings" style="width:10%; vertical-align:middle; text-align:center">@food.Fats</td>
-            <td class="font-settings" style="width:10%; vertical-align:middle; text-align:center">@food.Carbohydrates</td>
-            <td class="font-settings" style="vertical-align:middle">
-                <a style="margin-bottom:50%" asp-area="Admin" asp-controller="Food" asp-action="Accept" asp-route-foodId="@food.Id" class="btn btn-settings font-settings float-right ml-3">Onayla</a>
-                <a asp-area="Admin" asp-controller="Food" asp-action="Deny" asp-route-foodId="@food.Id" class="btn btn-danger float-right font-settings ml-3" style="color:black">Reddet</a>
-            </td>
-        </tr>
+            <tr>
+                <td scope="col" style="width:15%; height:15%; vertical-align:middle"><img src="@food.PictureUrl" class="card-img-top"></td>
+                <td class="font-settings" style="width:10%; vertical-align:middle; text-align:center">@food.Name</td>
+                <td class="font-settings" style="width:25%; vertical-align:middle">@food.Description</td>
+                <td class="font-settings" style="width:10%; vertical-align:middle; text-align:center">@food.Calories</td>
+                <td class="font-settings" style="width:10%; vertical-align:middle; text-align:center">@food.Proteins</td>
+                <td class="font-settings" style="width:10%; vertical-align:middle; text-align:center">@food.Fats</td>
+                <td class="font-settings" style="width:10%; vertical-align:middle; text-align:center">@food.Carbohydrates</td>
+                <td class="font-settings" style="vertical-align:middle">
+                    <a style="margin-bottom:50%" asp-area="Admin" asp-controller="Food" asp-action="Accept" asp-route-foodId="@food.Id" class="btn btn-settings font-settings float-right ml-3">Onayla</a>
+                    <a asp-area="Admin" asp-controller="Food" asp-action="Deny" asp-route-foodId="@food.Id" class="btn btn-danger float-right font-settings ml-3" style="color:black">Reddet</a>
+                </td>
+            </tr>
         }
     </tbody>
 </table>
