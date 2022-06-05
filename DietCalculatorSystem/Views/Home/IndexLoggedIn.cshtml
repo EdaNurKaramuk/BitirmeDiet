@@ -30,7 +30,7 @@
             {
                 <label asp-for="BMIValue" class="c-label">Vücut Kitle Endeksiniz (BMI)</label>
                 <input asp-for="BMIValue" class="c-input" value="@Model.BMIValue" readonly />
-                <label class="c-label">Sonuç: @Model.BMIValueResult</label>
+                <label class="c-label"><p style="color:#b93a1a">Sonuç :</p><hr> @Model.BMIValueResult</label>
             }
         </form>
     </div>
