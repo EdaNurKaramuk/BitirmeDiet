@@ -17,23 +17,23 @@
 	<header>
 		<nav class="navbar bg-secondary font-settings navbar-expand-sm navbar-light box-shadow mb-3">
 			<div class="container" style="width: 100% !important; max-width: 100% !important; padding: 0px !important; margin: 0px !important">
-				<a class="navbar-brand btn-settings" asp-area="" asp-controller="Home" asp-action="Index"><b>Ana Sayfa</b></a>
+				<a class="navbar-brand btn-settings" asp-area="" asp-controller="Home" asp-action="Index"><b>ANA SAYFA</b></a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
 						aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-					<a class="navbar-brand btn-settings" asp-area="" asp-controller="Food" asp-action="All"><b>Yemekler</b></a>
+					<a class="navbar-brand btn-settings" asp-area="" asp-controller="Food" asp-action="All"><b>YEMEKLER</b></a>
 					<ul class="navbar-nav flex-grow-1">
 						@if (User.Identity.IsAuthenticated)
 						{
 							<li class="nav-item navbar-brand">
-								<a class="navbar-brand btn-settings" asp-area="" asp-controller="Calculator" asp-action="Calculator"><b>Hesaplayıcı</b></a>
+								<a class="navbar-brand btn-settings" asp-area="" asp-controller="Calculator" asp-action="Calculator"><b>HESAPLAYICI</b></a>
 							</li>
 							<li >
 								<button class="navbar-brand btn-settings" style="margin-top:5px;"
 									data-toggle="toggle" data-target="#expandingButton">
-									<b>Diyet</b>
+									<b>DİYET</b>
 								</button>
 
 								<div id="expandingButton">

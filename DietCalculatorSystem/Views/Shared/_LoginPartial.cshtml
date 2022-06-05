@@ -11,24 +11,24 @@
         {
             @if (User.IsInRole("Administrator"))
             {
-                <a class="navbar-brand btn-settings" asp-area="Admin" asp-controller="Food" asp-action="Requests"><b>İstekler</b></a>
+                <a class="navbar-brand btn-settings" asp-area="Admin" asp-controller="Food" asp-action="Requests"><b>İSTEKLER</b></a>
             }
             <li class="nav-item">
-                <a class="navbar-brand btn-settings" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage"><b>Merhaba @User.Identity.Name!</b></a>
+                <a class="navbar-brand btn-settings" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage"><b>MERHABA @User.Identity.Name!</b></a>
             </li>
             <li class="nav-item">
                 <form class="font-settings" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
-                    <button type="submit" class="navbar-brand btn-settings"><b>Çıkış Yap</b></button>
+                    <button type="submit" class="navbar-brand btn-settings"><b>ÇIKIŞ YAP</b></button>
                 </form>
             </li>
         }
         else
         {
             <li class="nav-item">
-                <a class="navbar-brand btn-settings" asp-area="Identity" asp-page="/Account/Register"><b>Kayıt Ol</b></a>
+                <a class="navbar-brand btn-settings" asp-area="Identity" asp-page="/Account/Register"><b>KAYIT OL</b></a>
             </li>
             <li class="nav-item">
-                <a class="navbar-brand btn-settings" asp-area="Identity" asp-page="/Account/Login"><b>Giriş Yap</b></a>
+                <a class="navbar-brand btn-settings" asp-area="Identity" asp-page="/Account/Login"><b>GİRİŞ YAP</b></a>
             </li>
         }
     </ul>
