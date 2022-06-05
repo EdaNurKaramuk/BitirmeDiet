@@ -32,8 +32,6 @@
                 <input asp-for="BMIValue" class="c-input" value="@Model.BMIValue" readonly />
                 <label class="c-label">Sonuç: @Model.BMIValueResult</label>
             }
-
-
         </form>
     </div>
 </div>
@@ -46,7 +44,7 @@
             <a class="c-blog-item-a" href="#">Devamını oku</a>
         </div>
         <div class="c-blog-item">
-            <img class="c-blog-item-img"  src="~/images/surplus.jpg" />
+            <img class="c-blog-item-img" src="~/images/surplus.jpg" />
             <h2 class="c-blog-item-h2">Surplus</h2>
             <span class="c-blog-item-span">
                 Kalori fazlalığı, tükettiğimiz kalori sayısının yaktığımız kalori sayısından fazla olması durumudur. Tükettiğimiz kalorinin yaktığımız kaloriden fazla olması durumunda vücut kütlemiz artar. Kilomuzu veya kas kütlemizi artırmayı hedefliyorsak kalori fazlasına ihtiyacımız olacak ve vücudun yaktığı kaloriden daha fazla kalori tüketmeniz gerekecek.
@@ -55,10 +53,14 @@
             <a class="c-blog-item-a" href="#">Devamını oku</a>
         </div>
         <div class="c-blog-item">
-            <img class="c-blog-item-img"  src="~/images/balanced.jpg" />
+            <img class="c-blog-item-img" src="~/images/balanced.jpg" />
             <h2 class="c-blog-item-h2">Balanced</h2>
             <span class="c-blog-item-span">Dengeli beslenme, bir kişinin tüm beslenme ihtiyaçlarını karşılar. İnsanların sağlıklı kalabilmeleri için belirli miktarda kaloriye ve besine ihtiyacı vardır. Önerilen günlük kalori alımını aşmadan hem mevut kilonun korunmasını hem de kişinin ihtiyaç duyduğu tüm besin maddelerini almasını sağlar. Dengeli beslenerek insanlar ihtiyaç duydukları besinleri ve kalorileri alabilirler ve abur cubur veya besin değeri olmayan yiyecekleri yemekten kaçınabilirler. Aynı zamanda insanların sağlıklı kalmasına yardımcı olarak hastalık riskini azaltır. Dengeli beslenmek için beş gruptan oluşan gıdalar tüketilmelidir. Bu 5 grup sebze, meyve, tahıl, protein ve süt ürünlerinden oluşmaktadır.</span>
             <a class="c-blog-item-a" href="#">Devamını oku</a>
         </div>
     </div>
 </div>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}

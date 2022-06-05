@@ -10,10 +10,12 @@ namespace DietCalculatorSystem.Models.Home
     public class CalculateBMIModel
     {
         [Required(ErrorMessage = "Boy zorunlu.")]
+        [RegularExpression(ValidNumberRegex, ErrorMessage = "Geçersiz değer! Girilen değer ',' yerine '.' sembolü ile ayrılmalı!")]
         [Range(MinHeight, MaxHeight, ErrorMessage = "Boy en az {1} ve en fazla {2} cm olmalı.")]
         public double? Height { get; set; }
 
         [Required(ErrorMessage = "Kilo zorunlu.")]
+        [RegularExpression(ValidNumberRegex, ErrorMessage = "Geçersiz değer! Girilen değer ',' yerine '.' sembolü ile ayrılmalı!")]
         [Range(MinWeight, MaxWeight, ErrorMessage = "Kilo en az {1} ve en fazla {2} cm olmalı.")]
         public double? Weight { get; set; }
 

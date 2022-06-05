@@ -43,6 +43,7 @@
             public const double MaxWeight = 500;
             public const int MinHeight = 100;
             public const int MaxHeight = 300;
+            public const string ValidNumberRegex = @"^\d+[\.\d]*$";
         }
     }
 }
